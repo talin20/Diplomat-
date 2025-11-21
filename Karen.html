@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باركود مع أيقونات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .description {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .qrcode-container {
+            margin: 25px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        
+        #qrcode {
+            display: inline-block;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .link-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .link-icon {
+            font-size: 24px;
+            margin-left: 15px;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .link-text {
+            flex: 1;
+            text-align: right;
+            font-size: 16px;
+        }
+        
+        .facebook {
+            background: linear-gradient(to right, #3b5998, #4a69a6);
+        }
+        
+        .whatsapp {
+            background: linear-gradient(to right, #25D366, #2fd669);
+        }
+        
+        .phone {
+            background: linear-gradient(to right, #34b7f1, #5bc0de);
+        }
+        
+        .footer {
+            margin-top: 25px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .link-item {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>كز #الدبلوماسي 💼 للمحاسبة والمراجعة 🧾</h1>
+        <p class="description">🎉✨ افتتاح المكتب الجديد ✨🎉
+يسعدنا أن نعلن عن الافتتاح الرسمي لـمكتبنا.
+🏢 المركز #الدبلوماسي 💼 للمحاسبة والمراجعة 🧾🚀 
+هل بتدير نشاط أو شركة وعايز تركز على شغلك من غير قلق محاسبي أو ضريبي؟
+المركز #الدبلوماسي 💼  للمحاسبة والمراجعة هيساعدك تدير أمورك المالية باحتراف يعني ركز في شغلك وسيب الباقي علينا :
+🔥 تاسيس الشركات وعمل سجل تجاري وبطاقة ضريبية لجميع الانشطه.
+🌹 اعداد وتقديم الاقرارات الضريبيه السنويه والشهريه 
+🧾 محاسبة ومراجعة دقيقة
+💼 إعداد تقارير مالية احترافية
+📝 استشارات ضريبية وفحص وتسوية نزاعات
+🏢 تأسيس ومتابعة الشركات والأنشطة
+📉 دراسة الجدوى 
+⚖ إستخراج البطاقة الإسترادية والبطاقة التصديرية 
+📊 تراخيص المحلات والمنشأت العقارية التجارية والسكنية 
+📍 العنوان: زفتى ش يوسف الجندى (ش سوق السمك) فوق مكتبة الشوربجى الدور الثالث
+
+ 
+((ارقامك مرتبه ،، قرراتك محسوبة صح)) 
+✅ تواصل معنا الآن وخليك دايمًا سابق بخطوة 👌💪</p>
+        
+        <div class="qrcode-container">
+            <div id="qrcode"></div>
+        </div>
+        
+        <div class="links-container">
+            <a href="https://www.facebook.com/share/17Uzr85AWo/" class="link-item facebook" target="_blank">
+                <span class="link-text">صفحة الفيسبوك</span>
+                <span class="link-icon"><i class="fab fa-facebook-f"></i></span>
+            </a>
+            
+            <a href="https://wa.me/+201280801023" class="link-item whatsapp" target="_blank">
+                <span class="link-text">رابط الواتساب</span>
+                <span class="link-icon"><i class="fab fa-whatsapp"></i></span>
+            </a>
+            
+            <a href="tel:+201280801023" class="link-item phone">
+                <span class="link-text">اتصال هاتفي</span>
+                <span class="link-icon"><i class="fas fa-phone-alt"></i></span>
+            </a>
+        </div>
+        
+        <p class="footer">جميع الحقوق محفوظة &copy; 2023</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // إنشاء الباركود
+            const qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: "https://www.facebook.com/share/17Uzr85AWo/\nhttps://wa.me/+201280801023\ntel:+201280801023",
+                width: 200,
+                height: 200,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        });
+    </script>
+</body>
+</html>#80FF00
